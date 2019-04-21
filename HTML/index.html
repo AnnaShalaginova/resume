@@ -20,6 +20,17 @@
 	<ul id="main-menu">
     	<li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+
+
         <li><a href="#work">Work</a></li>
         <li><a href="#work">Education</a></li>
         <li><a href="#connect">Connect</a></li>
@@ -37,8 +48,26 @@
         <div class="top-divider"></div>
         <div class="content">
         	<img src="images/designer-photo.jpg" />
-            <h2>My Name is Anna Shalaginova, and I am a Project Manager</h2>
-            <p>I started my career at a global marketing consultancy, driving survey implementation and data analysis projects. I then moved on optimizing workflows and collaborating on web development and production projects for a media organization. After covering the news in FinTech, commerce and payments for over year, I've sharpened my web development skills at General Assembly.</p> 
+            <h2>ANNA SHALAGINOVA, PMP</h2>
+            <p>Research Design, Testing, Implementation and Data Analysis:</p>
+
+
+
+
+
+                        <ul>
+                            <li>Testing Survey Logic in Confirmit, IBM SPSS Dimensions software</li>
+                            <li>Data Modelling and Data Analysis in MS Excel: VBA, macros, advanced functions</li>
+                            <li>Reporting: MS Powerpoint</li>
+                            <li>English-French and French-to-English translation of research materials</li>
+
+                        </ul>
+                    </li>
+                </ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </p> 
             
         </div>
     <div class="bottom-divider"></div> 
@@ -160,6 +189,25 @@
  			 $(document).ready(function(){
     		$("a[rel^='prettyPhoto']").prettyPhoto({social_tools:false, deeplinking: false});
   			});
+        /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
 
         </script>
 </body>
